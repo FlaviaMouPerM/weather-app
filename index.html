@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <header>
+      <form class="form">
+        <div class="search">
+          <label class="search-label" for="city-input">City</label>
+          <input
+            class="search-input"
+            type="text"
+            id="city-input"
+            name="city"
+            placeholder="Enter a city"
+          />
+          <div class="temperature_session">
+            <div class="search_temperature">
+              <input
+                type="radio"
+                id="celsius"
+                name="temperature"
+                value="celsius"
+                checked
+              />
+              <label for="celsius">Celsius</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="fahrenheit"
+                name="temperature"
+                value="fahrenheit"
+              />
+              <label for="fahrenheit">Fahrenheit</label>
+            </div>
+          </div>
+          <button type="submit" class="btn">Search</button>
+        </div>
+      </form>
+    </header>
+
+    <main class="weather-container">
+      <section class="current-weather" aria-labelledby="weather-title">
+        <header class="weather-header">
+          <h2 class="weather-title" id="weather-title">Meteorologia atual</h2>
+
+          <time class="current-time">10:51</time>
+        </header>
+
+        <div class="weather-main">
+          <div class="temperature">
+            <img
+              class="weather-icon"
+              src="./src/assets/son.png"
+              alt="Sunny weather"
+              width="150"
+            />
+
+            <p class="temperature-value">
+              21 <span class="temperature-unit"></span>
+            </p>
+
+            <div class="weather-condition">
+              <p class="condition">Sol</p>
+
+              <p class="feels-like">
+                Sensação Térmica
+                <span class="feels-like-value">29º</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="weather-summary">
+          Vai estar
+          <span class="summary-condition">sol</span>. A máxima atingirá
+          <span class="maximum-temperature">35º</span> e a mínima 
+          <span class="minimum-temperature">-1º</span>
+        </p>
+
+        <section class="weather-details" aria-label="Weather details">
+         
+          <article class="weather-detail">
+            <p class="detail-label">Vento</p>
+            <span class="detail-value wind-speed">12 Km/h</span>
+          </article>
+
+          <article class="weather-detail">
+            <p class="detail-label">Humidade</p>
+            <span class="detail-value humidity"></span>
+          </article>
+
+          <article class="weather-detail">
+            <p class="detail-label">Visibilidade</p>
+            <span class="detail-value visibility">10 Km</span>
+          </article>
+
+          <article class="weather-detail">
+            <p class="detail-label">Ponto de Orvalho</p>
+            <span class="detail-value dew-point">13º</span>
+          </article>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>By Flávia Martins</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

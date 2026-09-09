@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: rgba(229, 229, 239, 0.871);
+  font-size: 18px;
+}
+body {
+  background-color: rgb(36, 37, 65);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  border-bottom: 1px solid rgb(30, 31, 55);
+  box-shadow: 10px 5px 5px rgb(30, 31, 55);
+
+  .search-label {
+    color: #6b6375;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  #city-input {
+    height: 30px;
+    width: 300px;
+    font-size: 15px;
+    border-radius: 10px;
+    color: #6b6375;
+    border: 3px solid rgb(30, 31, 55);
+    background: rgb(48, 49, 81);
+    box-shadow: 10px 5px 5px rgb(30, 31, 55);
+    outline: none;
+  }
+  .temperature_session{
+    margin: 15px;
+  }
+  .btn {
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    color: #6b6375;
+    font-weight: 500;
+    font-size: 15px;
+    border: 3px solid rgb(30, 31, 55);
+    background: rgb(40, 43, 140);
+    box-shadow: 10px 5px 5px rgb(30, 31, 55);
+  }
+  .btn:hover{
+     background: rgb(37, 7, 229);
+     color: antiquewhite;
+  }
+}
+main {
+  display: flex;
+  justify-content: center;
+
+  .current-weather {
+    max-width: 60%;
+    min-height: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    box-shadow: none;
+    outline: none;
+    .weather-title,
+    .current-time {
+      margin-left: 30px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+  }
+
+  .temperature {
+    display: flex;
+    align-items: center;
+    .temperature-value {
+      font-size: 70px;
+      margin-top: -25px;
+      margin-left: -20px;
+      .temperature-unit {
+        font-size: 40px;
+        margin-right: 20px;
+        position: relative;
+        top: -18px;
+      }
+    }
+  }
+
+  .weather-summary {
+    margin: 0 0 15px 15px;
+    font-size: 18px;
+  }
+
+  .weather-details {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(70px, 150px));
+    gap: 20px;
+    margin-left: 15px;
+  }
+}
+
+footer {
+  height: 40px;
+  border-top: 1px solid rgb(30, 31, 55);
+  box-shadow: 5px 5px 5px rgb(30, 31, 55) inset;
+  text-align: center;
+  p {
+    margin-top: 10px;
+    color: #6b6375;
+    font-size: 18px;
+  }
+}
